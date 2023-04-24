@@ -1,0 +1,143 @@
+.services {
+  background-color: #F2F2F2;
+
+
+  &-title {
+    margin-top: 67px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #2F2F51;
+    padding-bottom: 48px;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    // margin-left: 360px;
+
+    gap: 10px;
+
+    &__item {
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 50px;
+      padding-right: 150px;
+      padding-bottom: 35px;
+      padding-left: 50px;
+      width: 595px;
+      height: 268px;
+
+      &:nth-child(1) {
+        background-image: url(/img/services/Group19.svg);
+      }
+
+      &:nth-child(2) {
+        background:
+          linear-gradient(90.45deg, #FFFFFF 47.56%, rgba(255, 255, 255, 0) 98.81%),
+          url(/img/services/Group20.png) no-repeat;
+        background-blend-mode: screen;
+        background-size: cover;
+        border-radius: 3px;
+      }
+
+      &:nth-child(3) {
+        background-image: url(/img/services/Group18.svg);
+      }
+
+      &:nth-child(4) {
+        background-image: url(/img/services/Group21.svg);
+      }
+    }
+
+    &__item:hover {
+      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+    }
+  }
+
+  .container+div {
+    background-image: url(/img/services/Group18.svg);
+  }
+
+
+
+
+  .inner-top {
+    display: flex;
+    align-items: center;
+    width: 88%;
+
+    &-title {
+      margin-left: 20px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: #2F2F51;
+
+    }
+
+
+  }
+
+  .inner-description {
+    margin-top: 31px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2F2F51;
+
+  }
+}
+
+@media (max-width:1281px) {
+
+
+  .services {
+    &-list {
+      justify-content: center;
+    }
+  }
+}
+
+
+@media (max-width:996px) {
+  .services {
+    &-list {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width:450px) {
+
+  .services {
+display: none;
+    .services>.container {
+      width: 340px;
+    }
+
+
+    &-list__item {
+      padding-right: 0;
+      width: 100%;
+    }
+
+    .inner-description {
+      font-size: 12px;
+      // margin-top: 0;
+      line-height: 16px;
+    }
+
+    .inner-top-title {
+      font-size: 20px;
+    }
+  }
+}

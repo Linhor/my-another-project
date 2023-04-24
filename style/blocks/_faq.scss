@@ -1,0 +1,297 @@
+.faq {
+
+
+  &-wrap {
+    height: 791px;
+    background: #EF7F1A;
+    border-radius: 7px;
+    user-select: none;
+  }
+
+
+  &-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    // padding-left: 522px;
+    padding-left: 43%;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  &__item {
+    padding-bottom: 14px;
+    padding-right: 101px;
+    padding-left: 101px;
+
+  }
+
+  // &-list details{
+  summary {
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    padding: 1em .5em;
+    list-style: none; // Remove arrow
+    // width: 998px;
+    width: 100%;
+    height: 82px;
+
+    &::-webkit-details-marker {
+      display: none; // Remove arrow
+    }
+  }
+}
+
+summary {
+  border-radius: 3px;
+  background-color: rgba(238, 238, 243, 1);
+  position: relative;
+  cursor: pointer;
+  list-style: none; // Remove arrow
+
+  &::-webkit-details-marker {
+    display: none; // Remove arrow
+  }
+
+  p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2F2F51;
+    width: auto;
+    margin-top: 15px;
+    padding-left: 11px;
+
+  }
+}
+
+//below functional for arrows and hover,details
+details {
+
+  &[open] {
+    background-color: #FFFF;
+    border-radius: 3px;
+    padding-bottom: 40px;
+
+    .content {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      // line-height: 19px;
+      line-height: 6px;
+      color: #000000;
+      padding-left: 19px;
+    }
+
+    summary .icon-arrow_reverse {
+      display: block;
+    }
+
+    summary .icon-arrow {
+      display: none;
+
+    }
+  }
+
+  .icon-arrow,
+  .icon-arrow_reverse {
+    margin-left: 93.3%;
+    width: 28px;
+    margin-top: -18px;
+    padding-right: 30px;
+    position: absolute;
+  }
+
+  .icon-arrow {
+    display: block;
+    background-image: url(/img/faq/Vector\ 18.svg);
+  }
+
+  .icon-arrow_reverse {
+    background-image: url(/img/faq/Vector\ 21.svg);
+    display: none;
+    margin-top: -28px;
+  }
+}
+
+//selected faq-item
+.selected {
+
+  p {
+    color: #EF7F04;
+  }
+
+  .icon-arrow {
+    background-image: url(/img/faq/Vector\ 19.svg);
+  }
+}
+
+//new functional for hover whole element
+details:hover {
+  p {
+    color: #EF7F04;
+  }
+
+  .icon-arrow {
+    background-image: url(/img/faq/Vector\ 19.svg);
+  }
+}
+
+@media (max-width:996px) {
+  .faq {
+    &-wrap {
+      width: 880px;
+    }
+
+    // &-title {
+    //   padding-left: 368px;
+    // }
+
+    &__item {
+      padding-left: 44px;
+      padding-right: 36px;
+
+    }
+
+    summary {
+      width: 100%;
+    }
+
+    .icon-arrow,
+    .icon-arrow_reverse {
+      margin-left: 742px;
+    }
+
+
+  }
+}
+
+
+@media(hover: hover) {
+
+  details:hover {
+    p {
+      color: #EF7F04;
+
+    }
+
+    .icon-arrow {
+      background-image: url(/img/faq/Vector\ 19.svg);
+    }
+  }
+}
+
+@media (max-width:850px) {
+
+  .faq {
+    &-wrap {
+      width: 100%;
+      
+    }
+&-title{
+  padding-left: 28%;
+}
+
+    &__item {
+      padding-left: 44px;
+      padding-right: 36px;
+
+    }
+
+    summary {
+      width: 100%;
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .icon-arrow,
+    .icon-arrow_reverse {
+      margin-left: 90%;
+    }
+
+
+  }
+
+  .selected {
+
+    p {
+      color: #EF7F04;
+    }
+  }
+
+
+}
+
+
+@media (max-width:450px) {
+
+
+  .faq {
+
+&-wrap{
+  height: 600px;
+}
+
+    &__item {
+      padding-left: 44px;
+      padding-right: 36px;
+
+    }
+
+    summary {
+      width: 100%;
+      height: 60px;
+
+      p {
+        font-size: 12px;
+        margin-top: 0;
+        line-height: 12px;
+        padding-left: 0;
+        width: 80%;
+      }
+    }
+
+    .icon-arrow,
+    .icon-arrow_reverse {
+      margin-left: 80%;
+    }
+  }
+
+  .selected {
+
+    p {
+      color: #EF7F04;
+    }
+
+
+  }
+}
+
+details {
+
+  &[open] {
+    background-color: #FFFF;
+    border-radius: 3px;
+    padding-bottom: 40px;
+
+    .content {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      // line-height: 19px;
+      line-height: 15px;
+      color: #000000;
+      padding-left: 19px;
+    }
+  }
+}

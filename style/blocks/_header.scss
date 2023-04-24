@@ -1,0 +1,384 @@
+.header {
+  background-color: #FFFFFF;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 17px 0px;
+    font-family: 'Roboto';
+    padding-bottom: 19px;
+    align-items: center;
+  }
+
+  .navigation {
+    padding-left: 44px;
+
+    &__list {
+      display: flex;
+      gap: 28px;
+
+      a:hover {
+        padding-top: 35px;
+        border-top: solid #EF7F04;
+        border-width: 4px;
+        color: #EF7F04;
+      }
+    }
+
+    .active a {
+      padding-top: 35px;
+      border-top: solid #EF7F04;
+      border-width: 4px;
+      color: #EF7F04;
+    }
+
+    &__item-link {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+    }
+  }
+
+  &-top-list {
+    padding-left: 50px;
+
+    &-buttons li {
+      display: inline-flex;
+      margin-right: 14px;
+    }
+
+    a {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 15.23px;
+      color: #FFFFFF;
+      text-decoration: none;
+      padding-left: 13px;
+    }
+
+  }
+
+  .button {
+    padding-top: 12px;
+    padding-bottom: 13px;
+    border-radius: 3px;
+    width: 172px;
+    height: 40px;
+  }
+
+  .button_orange {
+    background-color: #EF7F04;
+  }
+
+  .button_blue {
+    background-color: #3B3A63;
+  }
+
+  .request-icon,
+  .to-order-icon {
+    margin-left: 13.71px;
+    width: 23px;
+    height: 23px;
+    margin-top: -4px;
+
+  }
+}
+
+
+
+
+
+@media (max-width:1280px) {
+  .header {
+    &-wrapper {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    &__menu {
+      padding-left: 2%;
+    }
+
+    &-top-list {
+      padding-left: 4%;
+    }
+
+    &__logo {
+      margin-left: 20px;
+    }
+  }
+
+}
+
+@media (max-width:1200px) {
+  .header {
+    &-wrapper {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    &__menu {
+      padding-left: 2%;
+    }
+
+    &-top-list {
+      padding-left: 4%;
+    }
+
+    &__logo {
+      margin-left: 20px;
+    }
+
+    .navigation__list {
+      gap: 10px;
+    }
+  }
+
+
+}
+
+
+
+// Реализация бургер меню под планшет
+@media (min-width:1105px) {
+  .header__menu {
+    display: none;
+
+  }
+
+}
+
+
+
+@media (max-width:1104px) {
+
+  .header {
+    position: fixed; // Сделал фиксированную шапку
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding-bottom: 10px;
+
+    &-wrapper {
+      padding-bottom: 5px;
+
+    }
+
+    &__logo {
+      padding-left: 40px;
+    }
+
+    &-top-list {
+      padding-left: 319px;
+    }
+  }
+
+  .navigation {
+    display: none;
+
+
+
+  }
+
+  .menu__body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // height: 17%;
+    transform: translate(-100%, 0px);
+    background-color: #FFFFFF;
+    padding: 40px 30px 30px 30px;
+    transition: left 0.3s ease 0s;
+    overflow: auto;
+
+    .navigation {
+      &__list {
+        margin-left: 130px;
+
+
+        .active a {
+          padding-top: 35px;
+          border-top: none;
+          border-width: 4px;
+          color: black;
+        }
+
+        a:hover {
+          padding-top: 35px;
+          border-top: none;
+          border-width: 4px;
+          color: #EF7F04;
+        }
+      }
+
+    }
+  }
+
+  body._lock {
+    overflow: hidden;
+  }
+
+  .menu__list {
+    position: relative;
+    margin: 0px 0px 0px 20px;
+  }
+
+  .menu__icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 55px;
+    height: 30px;
+    cursor: pointer;
+    // margin-left: 35px;
+  }
+
+  .menu__icon span,
+  .menu__icon::before,
+  .menu__icon::after {
+    left: 0;
+    position: absolute;
+    height: 19%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #EF7F04;
+  }
+
+  .menu__icon::before,
+  .menu__icon::after {
+    content: '';
+  }
+
+  .menu__icon::before {
+    top: 0;
+  }
+
+  .menu__icon::after {
+    bottom: 0;
+  }
+
+  .menu__icon span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+
+  .menu__icon._active span {
+
+    transform: scale(0) translate(0px, -50%);
+  }
+
+  .menu__icon._active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
+
+  .menu__icon._active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+  }
+
+
+  .menu__body._active {
+    transform: translate(0px, 0px);
+  }
+
+  .menu__list>li {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .menu__list>li:last-child {
+    margin-bottom: 0;
+  }
+
+  .menu__link {
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width:850px) {
+  .header {
+
+    &-wrapper {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    &__menu {
+      padding-left: 2%;
+    }
+
+    &-top-list {
+      padding-left: 18%;
+    }
+
+  }
+
+  .menu__body .navigation__list {
+    margin-left: 7%;
+  }
+
+}
+
+
+@media (max-width:450px) {
+
+  .header {
+
+    &-wrapper{
+    width: 400px;
+    margin: 0;
+    }
+    &-top-list {
+      display: none;
+    }
+
+    &__logo {
+      margin-left: 20%;
+    }
+  }
+
+  .menu__body .navigation__list {
+    margin-left: 7%;
+  }
+
+  .menu__body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translate(-100%, 0px);
+    background-color: #FFFFFF;
+    padding: 40px 0px 0px 0px;
+    transition: left 0.3s ease 0s;
+    overflow: auto;
+
+    .navigation {
+      &__list {
+        display: block;
+        margin-top: 10%;
+        margin-left: 10px;
+      }
+
+      &__item {
+        padding-bottom: 50px;
+      }
+
+      &__item {
+        color: #FFFFFF;
+      }
+
+    }
+
+    .button_blue,
+    .button_orange {
+      color: #FFFFFF;
+      padding-left: 40px;
+      padding-right: 10px;
+    }
+  }
+}
